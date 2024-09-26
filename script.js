@@ -1,6 +1,22 @@
 function stringChop(str, size) {
-  // your code here
-}
+  let temp="";
+	let ans=[];
+	for(let i=0;i<str.length;i++)
+		{
+			let ch=str.charAt(i);
+			temp+=ch;
+			if(temp.length==size)
+			{
+				ans.push(temp);
+				temp="";
+			}
+		}
+	if(temp.length>0)
+	{
+		ans.push(temp);
+	}
+	return ans;
+}   
 
 // Do not change the code below
 const str = prompt("Enter String.");
